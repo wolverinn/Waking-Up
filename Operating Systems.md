@@ -84,15 +84,21 @@ else:
 > 进程的同步是目的，而进程间通信是实现进程同步的手段
 
 <details>
-<summary>管程</summary>
+<summary>管程 Monitor</summary>
 
+管程将共享变量以及对这些共享变量的操作封装起来，形成一个具有一定接口的功能模块，这样只能通过管程提供的某个过程才能访问管程中的资源。进程只能互斥地使用管程，使用完之后必须释放管程并唤醒入口等待队列中的进程。
 
+当一个进程试图进入管程时，在**入口等待队列**等待。若P进程唤醒了Q进程，则Q进程先执行，P在**紧急等待队列**中等待。（**HOARE管程**）
+
+wait操作：执行wait操作的进程进入条件变量链末尾，唤醒紧急等待队列或者入口队列中的进程；signal操作：唤醒条件变量链中的进程，自己进入紧急等待队列，若条件变量链为空，则继续执行。（**HOARE管程**）
+
+**MESA管程**：将HOARE中的signal换成了notify（或者broadcast通知所有满足条件的），进行通知而不是立马交换管程的使用权，在合适的时候，条件队列首位的进程可以进入，进入之前必须用while检查条件是否合适。优点：没有额外的进程切换
 </details>
 
 <details>
 <summary>生产者-消费者问题</summary>
 
-
+> 问题描述：使用一个缓冲区来存放数据，只有缓冲区没有满，生产者才可以写入数据；只有缓冲区不为空，消费者才可以读出数据
 </details>
 
 <details>
@@ -129,6 +135,38 @@ else:
 - 就绪状态：进程已获得除处理机以外的所需资源，等待分配处理机资源
 - 运行状态：占用处理机资源运行，处于此状态的进程数小于等于CPU数
 - 阻塞状态： 进程等待某种条件，在条件满足之前无法执行
+
+### 进程调度策略有哪些？
+
+批处理系统：
+
+<details>
+<summary>先来先服务 first-come first-serverd（FCFS）</summary>
+
+按照请求的顺序进行调度。非抢占式，开销小，无饥饿问题，响应时间不确定（可能很慢）；
+
+对短进程不利，对IO密集型进程不利。
+</details>
+
+<details>
+<summary>最短作业优先 shortest job first（SJF）</summary>
+
+按估计运行时间最短的顺序进行调度。非抢占式，吞吐量高，开销可能较大，可能导致饥饿问题；
+
+对短进程提供好的响应时间，对长进程不利。
+</details>
+
+<details>
+<summary>最短剩余时间优先 shortest remaining time next（SRTN）</summary>
+
+
+</details>
+
+<details>
+<summary>最高响应比优先 Highest Response Ratio Next（HRRN）</summary>
+
+
+</details>
 
 ### 线程同步有哪些方式？
 

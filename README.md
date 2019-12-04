@@ -4,7 +4,8 @@
 1. [计算机网络](Computer%20Network.md)
 2. [操作系统](Operating%20Systems.md)
 3. [数据库](Database.md)
-4. [工具：Git/正则表达式/命令行](Git-ReExp-ComdLine.md)
-5. 设计模式、RESTful
+4. [设计模式](Design%20Pattern.md)
+5. [工具：Git/命令行/RESTful](Git-ComdLine-REST.md)
+6. Python
 
 ![1](_v_images/20191130211842900_27611.png)

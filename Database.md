@@ -154,7 +154,7 @@ delete;
 
 ### Drop/Delete/Truncate的区别？
 - **Delete**用来删除表的全部或者**部分数据**，执行delete之后，用户**需要提交**之后才会执行，会触发表上的DELETE**触发器**（包含一个OLD的虚拟表，可以只读访问被删除的数据），DELETE之后表结构还在，删除很慢，一行一行地删，因为会记录日志，可以利用日志还原数据；
-- **Truncate**删除表中的所有数据，这个操作**不能回滚**，也不会触发这个表上的触发器。操作比DELETE快很多（直接把表drop掉，再创建一个新表，删除的数据不能找回）。如果表中有自增列，则重置为1；
+- **Truncate**删除表中的所有数据，这个操作**不能回滚**，也不会触发这个表上的触发器。操作比DELETE快很多（直接把表drop掉，再创建一个新表，删除的数据不能找回）。如果表中有自增（AUTO_INCREMENT）列，则重置为1；
 - **Drop**命令从数据库中**删除表**，所有的数据行，索引和约束都会被删除；不能回滚，不会触发触发器；
 
 <details>
@@ -216,14 +216,68 @@ delete;
 - 分区索引（？）
 - 虚拟索引（Virtual）：模拟索引的存在而不用真正创建一个索引，用于快速测试创建索引对执行计划的影响。没有相关的索引段，不增加存储空间的使用
 
+### MySQL的两种存储引擎 InnoDB 和 MyISAM 的区别？
+- InnoDB**支持事务**，可以进行Commit和Rollback；
+- MyISAM 只支持表级锁，而 InnoDB 还**支持行级锁**，提高了并发操作的性能；
+- InnoDB **支持外键**；
+- MyISAM **崩溃**后发生损坏的概率比 InnoDB 高很多，而且**恢复的速度**也更慢；
+- MyISAM 支持**压缩**表和空间数据索引，InnoDB需要更多的内存和存储；
+- InnoDB 支持在线**热备份**
+
+<details>
+<summary>应用场景</summary>
+
+- **MyISAM** 管理非事务表。它提供高速存储和检索（MyISAM强调的是性能，每次查询具有原子性，其执行速度比InnoDB更快），以及全文搜索能力。如果表比较小，或者是只读数据（有大量的SELECT），还是可以使用MyISAM；
+- **InnoDB** 支持事务，并发情况下有很好的性能，基本可以替代MyISAM
+</details>
+
+<details>
+<summary>热备份和冷备份</summary>
+
+- 热备份：在数据库运行的情况下备份的方法。优点：可按表或用户备份，备份时数据库仍可使用，可恢复至任一时间点。但是不能出错
+- 冷备份：数据库正常关闭后，将关键性文件复制到另一位置的备份方式。优点：操作简单快速，恢复简单
+</details>
+
+### 如何优化数据库？
+<details>
+<summary>SQL 语句的优化</summary>
+
+- 使用 Explain 进行分析
+</details>
+
+<details>
+<summary>索引的优化</summary>
+
+
+</details>
+
+<details>
+<summary>数据库表结构的优化</summary>
+
+
+</details>
+
+<details>
+<summary>系统配置的优化</summary>
+
+
+</details>
+
+<details>
+<summary>硬件的优化</summary>
+
+
+</details>
+
 ### 参考
 
 - [数据库六大范式详解 -- CSDN博客](https://blog.csdn.net/weixin_43433032/article/details/89293663)
 - [delete，truncate 和 delete之间的区别 -- 博客园](https://www.cnblogs.com/alice-cj/p/10354737.html)
+- 数据库程序员面试笔试宝典-机械工业出版社
 
 ### 待完成
 - [ ] E-R 模型
-- [ ] residuals in Database-Interview--Concepts.md：关系型数据库完整性规则，事务的分类，XA协议，CAP定理，数据库的三级模式/三个抽象级别，二级映像；更新丢失；热备份，冷备份
+- [ ] residuals in Database-Interview--Concepts.md：关系型数据库完整性规则，事务的分类，XA协议，CAP定理，数据库的三级模式/三个抽象级别，二级映像；更新丢失
 - [ ] MySQL索引的底层实现原理（B+ Tree）（https://blog.csdn.net/justloveyou_/article/details/78308460）
 - [ ] 使用B+ 与红黑树、B-、Hash索引的比较（https://github.com/CyC2018/CS-Notes/blob/master/notes/MySQL.md）
 

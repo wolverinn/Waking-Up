@@ -242,41 +242,79 @@ delete;
 <details>
 <summary>SQL 语句的优化</summary>
 
-- 使用 Explain 进行分析
+> 分析慢查询日志：记录了在MySQL中响应时间超过阀值long_query_time的SQL语句，通过日志去找出IO大的SQL以及发现未命中索引的SQL
+
+> 使用 Explain 进行分析：通过explain命令可以得到表的读取顺序、数据读取操作的操作类型、哪些索引可以使用、**哪些索引被实际使用**、表之间的引用以及**被扫描的行数**等问题；
+
+- 应尽量避免在 where 子句中使用```!=```、```<```、```>```操作符或对字段进行null值判断，否则将引擎放弃使用索引而进行全表扫描；
+- 只返回必要的列：最好不要使用 SELECT * 语句；
+- 只返回必要的行：使用 LIMIT 语句来限制返回的数据；
+- 将一个大连接查询分解成对每一个表进行一次单表查询，然后在应用程序中进行关联，这样做的好处有：
+    - 让缓存更高效。对于连接查询，如果其中一个表发生变化，那么整个查询缓存就无法使用。而分解后的多个查询，即使其中一个表发生变化，对其它表的查询缓存依然可以使用；
+    - 分解成多个单表查询，这些单表查询的缓存结果更可能被其它查询使用到，从而减少冗余的查询；
+    - 减少锁竞争
 </details>
 
 <details>
 <summary>索引的优化</summary>
 
-
+注意会引起索引失效的情况，以及在适合的地方建立索引
 </details>
 
 <details>
 <summary>数据库表结构的优化</summary>
 
-
+- 设计表时遵循**三大范式**；
+- 选择合适的**数据类型**：尽可能不要存储NULL字段；使用简单的数据类型（int, varchar/ text）；
+- 表的**水平切分**（Sharding）：将同一个表中的记录拆分到多个结构相同的表中（策略：哈希取模；根据ID范围来分）。当一个表的数据不断增多时，Sharding 是必然的选择，它可以将数据分布到集群的不同节点上，从而缓解单个数据库的压力；
+- 表的**垂直切分**：将一张表按列切分成多个表。可以将不常用的字段单独放在同一个表中；把大字段独立放入一个表中；或者把经常使用的字段（关系密切的）放在一张表中。垂直切分之后业务更加清晰，系统之间整合或扩展容易，数据维护简单
 </details>
 
 <details>
 <summary>系统配置的优化</summary>
 
-
+- 操作系统：增加TCP支持的队列数；
+- MySQL配置文件优化：缓存池大小和个数设置
 </details>
 
 <details>
 <summary>硬件的优化</summary>
 
+- 磁盘性能：固态硬盘；
+- CPU：多核且高频；
+- 内存：增大内存
+</details>
 
+### 什么是主从复制？实现原理是什么？
+主从复制（Replication）是指数据可以从一个MySQL数据库主服务器复制到一个或多个从服务器，从服务器可以复制主服务器中的所有数据库或者特定的数据库，或者特定的表。默认采用异步模式。
+
+实现原理：
+- 主服务器 **binary log dump 线程**：将主服务器中的数据更改（增删改）日志写入 Binary log 中；
+- 从服务器 **I/O 线程**：负责从主服务器读取binary log，并写入本地的 Relay log；
+- 从服务器 **SQL 线程**：负责读取 Relay log，解析出主服务器已经执行的数据更改，并在从服务器中重新执行（Replay），保证主从数据的一致性
+
+##### 为什么要主从复制？
+<details>
+<summary>展开</summary>
+
+- 读写分离：主服务器负责写，从服务器负责读
+    - 缓解了锁的争用，即使主服务器中加了锁，依然可以进行读操作；
+    - 从服务器可以使用 MyISAM，提升查询性能以及节约系统开销；
+    - 增加冗余，提高可用性
+- 数据实时备份，当系统中某个节点发生故障时，可以方便的故障切换
+- 降低单个服务器磁盘I/O访问的频率，提高单个机器的I/O性能
 </details>
 
 ### 参考
 
 - [数据库六大范式详解 -- CSDN博客](https://blog.csdn.net/weixin_43433032/article/details/89293663)
 - [delete，truncate 和 delete之间的区别 -- 博客园](https://www.cnblogs.com/alice-cj/p/10354737.html)
+- [深度探索MySQL主从复制原理](https://baijiahao.baidu.com/s?id=1617888740370098866&wfr=spider&for=pc)
 - 数据库程序员面试笔试宝典-机械工业出版社
 
 ### 待完成
 - [ ] E-R 模型
+- [ ] [数据类型](https://github.com/CyC2018/CS-Notes/blob/master/notes/MySQL.md#%E5%9B%9B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)：VARCHAR和CHAR的区别，DATETIME和TIMESATMP的区别
 - [ ] residuals in Database-Interview--Concepts.md：关系型数据库完整性规则，事务的分类，XA协议，CAP定理，数据库的三级模式/三个抽象级别，二级映像；更新丢失
 - [ ] MySQL索引的底层实现原理（B+ Tree）（https://blog.csdn.net/justloveyou_/article/details/78308460）
 - [ ] 使用B+ 与红黑树、B-、Hash索引的比较（https://github.com/CyC2018/CS-Notes/blob/master/notes/MySQL.md）

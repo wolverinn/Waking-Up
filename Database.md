@@ -348,6 +348,12 @@ delete;
 - [ ] E-R 模型
 - [ ] [数据类型](https://github.com/CyC2018/CS-Notes/blob/master/notes/MySQL.md#%E5%9B%9B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)：VARCHAR和CHAR的区别，DATETIME和TIMESATMP的区别
 - [ ] Redis 面试
+    - [CyC2018](https://github.com/CyC2018/CS-Notes/blob/master/notes/Redis.md)
+    - [几率大的Redis面试题（含答案） - CSDN](https://blog.csdn.net/Butterfly_resting/article/details/89668661)
+    - [Redis面试题总结 - 简书](https://www.jianshu.com/p/65765dd10671)
+    - [Redis常见面试题 - 博客园](https://www.cnblogs.com/jasontec/p/9699242.html)
+    - [0voice/interview_internal_reference](https://github.com/0voice/interview_internal_reference#10)
+- [ ] [史上最全的数据库面试题，不看绝对后悔 -- 博客园](https://www.cnblogs.com/wenxiaofei/p/9853682.html)
 - [ ] MySQL索引的底层实现原理（B+ Tree）（https://blog.csdn.net/justloveyou_/article/details/78308460）
 - [ ] 使用B+ 与红黑树、B-、Hash索引的比较（https://github.com/CyC2018/CS-Notes/blob/master/notes/MySQL.md）
 

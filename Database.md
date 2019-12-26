@@ -8,19 +8,19 @@
     * [常见的封锁类型？](#常见的封锁类型)
     * [什么是三级封锁协议？](#什么是三级封锁协议)
     * [什么是两段锁协议？](#什么是两段锁协议)
-    * [什么是 MVCC？](#什么是MVCC)
+    * [什么是 MVCC？](#什么是-mvcc)
     * [数据库的范式？](#数据库的范式)
     * [列举几种表连接方式？](#列举几种表连接方式)
     * [什么是存储过程？有哪些优缺点？](#什么是存储过程有哪些优缺点)
     * [Drop/Delete/Truncate的区别？](#DropDeleteTruncate的区别)
     * [什么是视图？什么是游标？](#什么是视图什么是游标)
 * MySQL
-    * [数据库索引的实现原理（B+树）](#数据库索引的实现原理B-树)
+    * [数据库索引的实现原理（B+树）](#数据库索引的实现原理b树)
     * [使用索引的优点](#使用索引的优点)
     * [哪些情况下索引会失效？](#哪些情况下索引会失效)
     * [在哪些地方适合创建索引？](#在哪些地方适合创建索引)
     * [索引的分类？](#索引的分类)
-    * [MySQL的两种存储引擎 InnoDB 和 MyISAM 的区别？](#MySQL的两种存储引擎InnoDB和MyISAM的区别)
+    * [MySQL的两种存储引擎 InnoDB 和 MyISAM 的区别？](#MySQL的两种存储引擎-InnoDB-和-MyISAM-的区别)
     * [如何优化数据库？](#如何优化数据库)
     * [什么是主从复制？实现原理是什么？](#什么是主从复制实现原理是什么)
 * NoSQL/Redis
@@ -364,6 +364,7 @@ InnoDB的索引使用的是B+树实现，B+树对比B树的好处：
 
 ### 待完成
 - [ ] E-R 模型
+- [ ] 数据库的三级模式和二级映像
 - [ ] [数据类型](https://github.com/CyC2018/CS-Notes/blob/master/notes/MySQL.md#%E5%9B%9B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)：VARCHAR和CHAR的区别，DATETIME和TIMESATMP的区别
 - [ ] Redis 面试
     - [CyC2018](https://github.com/CyC2018/CS-Notes/blob/master/notes/Redis.md)

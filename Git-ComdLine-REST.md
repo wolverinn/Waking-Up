@@ -28,6 +28,11 @@
     - 然后再用```git push -f```提交到远程仓库
 
 #### Git 分支管理
+- 创建分支: ```git branch test```
+- 切换分支: ```git checkout test```
+- 创建并切换分支：```git checkout -b test```
+- 将test分支的更改合并到master分支：```git checkout master```; ```git merge test```
+- 删除分支：```git branch -d test```
 
 ## RESTful API
 REST指Representational State Transfer，可以翻译为“表现层状态转化”

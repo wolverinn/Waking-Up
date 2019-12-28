@@ -7,6 +7,5 @@
 ### 3. [数据库](Database.md)
 ### 4. [设计模式](Design%20Pattern.md)
 ### 5. [Git/命令行/RESTful](Git-ComdLine-REST.md)
-### 6. [Python](Python面试题.pdf)
+### 6. [Python](Python%20Handbook.md)
 
-![waking-up](_v_images/20191215230146724_3765.jpg)

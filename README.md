@@ -64,4 +64,7 @@
 > 为什么给我的笔记本起名为 Waking Up？当你看到这个词的时候，你脑中浮现出的可能是早上从床上醒来的画面，或者是自己在告诉自己说“醒醒吧，认清现实”的这样一个场景。  
 > 但是其实这个名字来源于电影《Lone Survivor》中的配乐《Waking Up》，让我联想到海豹突击队的坚毅、全力以赴、为了训练而付出汗水；在电影中，这段配乐出现的场景，是两名队员在基地外面的大草原上晨跑。
 
+> 电影中我很喜欢的一句话：  
+> Anything in life worth doing is worth overdoing. Moderation is for cowards.
+
 ![waking-up](_v_images/20191228182659294_7488.jpg)

@@ -8,6 +8,7 @@
     * [TCP的拥塞控制是怎么实现的？](#TCP的拥塞控制是怎么实现的)
     * [TCP与UDP的区别](#TCP与UDP的区别)
     * [TCP如何保证传输的可靠性](#TCP如何保证传输的可靠性)
+    * [什么是TCP粘包？](#什么是TCP粘包)
 * 应用层：HTTP和HTTPS
     * [HTTP和HTTPS有什么区别？](#HTTP和HTTPS有什么区别)
     * [GET与POST的区别？](#GET与POST的区别)
@@ -180,7 +181,17 @@ UDP接收方收到报文后，不需要给出任何确认
 <details>
 <summary>展开</summary>
 
+对某些实时性要求比较高的情况，选择UDP，比如游戏，媒体通信，直播；其它大部分情况下，HTTP都是用TCP
+
 [什么时候选TCP、UDP？](https://blog.csdn.net/yjxsdzx/article/details/71937886)
+</details>
+
+##### HTTP可以使用UDP吗？
+
+<details>
+<summary>展开</summary>
+
+
 </details>
 
 ##### 面向连接和无连接的区别
@@ -227,6 +238,22 @@ UDP接收方收到报文后，不需要给出任何确认
 6. 浏览器解密并验证摘要，若一致，则握手结束。之后的数据传送都使用对称加密的密钥进行加密
 
 总结：非对称加密算法用于在握手过程中加密生成的密码；对称加密算法用于对真正传输的数据进行加密；HASH算法用于验证数据的完整性。
+</details>
+
+##### 输入 www.baidu.com，怎么变成 https://www.baidu.com 的，怎么确定用HTTP还是HTTPS？
+
+<details>
+<summary>展开</summary>
+
+
+</details>
+
+##### HTTPS连接的时候，怎么确定收到的包是服务器发来的（中间人攻击）？
+
+<details>
+<summary>展开</summary>
+
+
 </details>
 
 ##### 什么是对称加密、非对称加密？区别是什么？
@@ -293,6 +320,13 @@ Cookie保存在客户端本地，客户端请求服务器时会将Cookie一起�
 - 传输层：TCP/UDP
 - 网络层：IP、ARP、NAT、RIP...
 
+<details>
+<summary>路由器、交换机位于哪一层？</summary>
+
+- 路由器网络层，根据IP地址进行寻址；
+- 交换机数据链路层，根据MAC地址进行寻址
+</details>
+
 ### 什么是RIP (Routing Information Protocol, 距离矢量路由协议)? 算法是什么？
 每个路由器维护一张表，记录该路由器到其它网络的”跳数“，路由器到与其直接连接的网络的跳数是1，每多经过一个路由器跳数就加1；更新该表时和相邻路由器交换路由信息；路由器允许一个路径最多包含15个路由器，如果跳数为16，则不可达。交付数据报时优先选取距离最短的路径。
 
@@ -327,3 +361,6 @@ Cookie保存在客户端本地，客户端请求服务器时会将Cookie一起�
 
 ### 参考
 - [面试/笔试第一弹 —— 计算机网络面试问题集锦](https://blog.csdn.net/justloveyou_/article/details/78303617)
+
+### 待完成
+- [ ] 发送窗口的大小，如何最大利用带宽，假设延迟100ms，发送端10Mb/s，接收端100Mb/s

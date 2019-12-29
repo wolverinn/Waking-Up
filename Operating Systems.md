@@ -343,14 +343,20 @@ IO多路复用（IO Multiplexing）是指单个进程/线程就可以同时处�
 <details>
 <summary>展开</summary>
 
+（我自己的见解：）
 
+- 安全性：防止用户程序恶意或者不小心破坏系统/内存/硬件资源；
+- 封装性：用户程序不需要实现更加底层的代码；
+- 利于调度：如果多个用户程序都在等待键盘输入，这时就需要进行调度；统一交给操作系统调度更加方便。
 </details>
 
 ##### 如何从用户态切换到内核态？
 <details>
 <summary>展开</summary>
 
-
+- 系统调用：比如读取命令行输入。本质上还是通过中断实现
+- 用户程序发生异常时：比如缺页异常
+- 外围设备的中断：外围设备完成用户请求的操作之后，会向CPU发出中断信号，这时CPU会转去处理对应的中断处理程序
 </details>
 
 ### 什么是死锁？
@@ -466,10 +472,10 @@ IO多路复用（IO Multiplexing）是指单个进程/线程就可以同时处�
 - [面试/笔试第二弹 —— 操作系统面试问题集锦 - CSDN博客](https://blog.csdn.net/justloveyou_/article/details/78304294)
 - [线程同步与并发 - - SegmentFault](https://segmentfault.com/a/1190000018970361)
 - [彻底搞懂epoll高效运行的原理](http://baijiahao.baidu.com/s?id=1641172494287388070&wfr=spider&for=pc)
+- [用户态与内核态的切换](https://www.cnblogs.com/lirong21/p/4213028.html)
 
 ### 待完成
 - [ ] IPC
 - [ ] 进程同步问题：生产者-消费者问题...
 - [ ] 银行家算法
 - [ ] 文件与文件系统、文件管理？
-- [ ] 如何实现LRU缓存淘汰算法？

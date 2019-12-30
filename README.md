@@ -49,6 +49,8 @@
 
 ## 4. [设计模式](Design%20Pattern.md)
 
+（待整理）
+
 ## 5. [工具](Git-ComdLine-REST.md)
 
 <div>

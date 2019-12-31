@@ -32,19 +32,19 @@
 ## 1. [计算机网络](Computer%20Network.md)
 
 <div>
-<img src="_v_images/20191228182911371_900.png" width="350px"></img>
+<a href="Computer%20Network.md"><img src="_v_images/20191228182911371_900.png" width="350px"></img></a>
 </div>
 
 ## 2. [操作系统](Operating%20Systems.md)
 
 <div>
-<img src="_v_images/20191228183019711_10018.png" width="260px"></img>
+<a href="Operating%20Systems.md"><img src="_v_images/20191228183019711_10018.png" width="260px"></img></a>
 </div>
 
 ## 3. [数据库](Database.md)
 
 <div>
-<img src="_v_images/20191229101924303_17994.png" width="400px"></img>
+<a href="Database.md"><img src="_v_images/20191229101924303_17994.png" width="400px"></img></a>
 </div>
 
 ## 4. [设计模式](Design%20Pattern.md)
@@ -54,13 +54,13 @@
 ## 5. [工具](Git-ComdLine-REST.md)
 
 <div>
-<img src="_v_images/20191229113357178_17374.png" width="160px"></img>
+<a href="Git-ComdLine-REST.md"><img src="_v_images/20191229113357178_17374.png" width="160px"></img></a>
 </div>
 
 ## 6. [Python](Python%20Handbook.md)
 
 <div>
-<img src="_v_images/20191229144622659_9248.png" width="370px"></img>
+<a href="Python%20Handbook.md"><img src="_v_images/20191229144622659_9248.png" width="370px"></img></a>
 </div>
 
 <div align="center">

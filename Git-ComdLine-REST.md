@@ -2,6 +2,7 @@
 
 * [Git](#git)
     * [Git 常用命令](#git-常用命令)
+    * [Git 标签管理](#git-标签管理)
     * [Git 撤销与回滚](#git-撤销与回滚)
     * [Git 分支管理](#git-分支管理)
 * [RESTful API](#restful-api)
@@ -16,13 +17,26 @@
 - ```git clone```
 - ```git remote add origin```
 - ```git push -u origin master```
+- 推送到远程仓库的dev分支：```git push origin dev```
 - ```git log```
+- ```git log --graph --pretty=oneline --abbrev-commit```
 - ```git status```
 - ```git diff```
 - ```git add *```
 - ```git commit -m "message"```
 - ```git push```
 - ```git pull```
+
+#### Git 标签管理
+- 首先切换到需要打标签的分支上，然后使用```git tag v1.0```就可以在当前commit打上v1.0的标签
+- ```git tag v1.0 commitID``` 对特定commit打标签
+- 打标签时加上message：```git tag -a <tagname> -m "message"```
+- ```git tag``` 查看所有标签
+- ```git show [tagname]``` 查看标签详细信息
+- ```git push origin <tagname>```可以推送一个本地标签
+- ```git push origin --tags```可以推送全部未推送过的本地标签
+- ```git tag -d <tagname>```可以删除一个本地标签
+- ```git push origin :refs/tags/<tagname>```可以删除一个远程标签（先从本地删除）
 
 #### Git 撤销与回滚
 - **暂存区**：```git add```之后commit之前存在的区域；**工作区**：```git commit```之后存在的区域；**远程仓库**：```git push```之后；
@@ -41,7 +55,8 @@
 - 创建分支: ```git branch test```
 - 切换分支: ```git checkout test```
 - 创建并切换分支：```git checkout -b test```
-- 将test分支的更改合并到master分支：```git checkout master```; ```git merge test```
+- 将test分支的更改合并到master分支：先在test分支上commit、push，再：```git checkout master```; ```git merge test```
+- 如果合并时产生冲突：先手动解决冲突，再合并
 - 删除分支：```git branch -d test```
 
 ## RESTful API

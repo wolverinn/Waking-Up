@@ -70,9 +70,8 @@ Python中有一个被称为Global Interpreter Lock（GIL）的东西，它会确
 
 ## 什么是装饰器？
 
-## Python 如何进行内存管理？
-
 ## Python 中的垃圾回收机制？
+[Python垃圾回收机制--完美讲解!](https://www.jianshu.com/p/1e375fb40506)
 
 ## 什么是 lambda 表达式？
 简单来说，lambda表达式通常是当你需要使用一个函数，但是又不想费脑袋去命名一个函数的时候使用，也就是通常所说的匿名函数。

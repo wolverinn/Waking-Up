@@ -40,7 +40,7 @@
 
 #### Git 撤销与回滚
 - **暂存区**：```git add```之后commit之前存在的区域；**工作区**：```git commit```之后存在的区域；**远程仓库**：```git push```之后；
-- 作了修改，但还没```git add```，撤销到上一次提交：```git checkout --filename```；```git checkout --.```
+- 作了修改，但还没```git add```，撤销到上一次提交：```git checkout -- filename```；```git checkout -- .```
 - 作了修改，并且已经```git add```，但还没```git commit```：
     - 先将暂存区的修改撤销：```git reset HEAD filename```/```git reset HEAD```；此时修改只存在于工作区，变为了 "unstaged changes"；
     - 再利用上面的checkout命令从工作区撤销修改

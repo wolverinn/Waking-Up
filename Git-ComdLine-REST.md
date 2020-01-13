@@ -90,4 +90,3 @@ REST指Representational State Transfer，可以翻译为“表现层状态转化
 - [Git教程 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/896043488029600)
 - [RESTful API 最佳实践 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html)
 - [GitHub - jlevy/the-art-of-command-line: Master the command line, in one page](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
-- [GitHub - yangyangwithgnu/the_new_world_linux: the new world, linux](https://github.com/yangyangwithgnu/the_new_world_linux)

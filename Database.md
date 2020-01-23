@@ -208,7 +208,7 @@ delete;
 
 ### 数据库索引的实现原理（B+树）
 
-见数据结构部分：B树，B+树
+见[数据结构部分：B树，B+树](https://github.com/wolverinn/Iridescent/blob/master/Data%20Structure.md#b%E6%A0%91)
 
 ##### 使用B树和B+树的比较
 

@@ -14,8 +14,9 @@
 ## Git
 
 #### Git 常用命令
+- ```git init```
 - ```git clone```
-- ```git remote add origin```
+- ```git remote add origin ***.git```
 - ```git push -u origin master```
 - 推送到远程仓库的dev分支：```git push origin dev```
 - ```git log```
@@ -26,6 +27,7 @@
 - ```git commit -m "message"```
 - ```git push```
 - ```git pull```
+- ```touch .gitignore```
 
 #### Git 标签管理
 - 首先切换到需要打标签的分支上，然后使用```git tag v1.0```就可以在当前commit打上v1.0的标签

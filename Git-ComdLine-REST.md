@@ -25,6 +25,7 @@
 - ```git diff```
 - ```git add *```
 - ```git commit -m "message"```
+- commit之后又改了一个小bug，但是又不想增加一个commit，可以用：```git commit --amend --no-edit```，直接将改动添加到上一次的commit中
 - ```git push```
 - ```git pull```
 - ```touch .gitignore```

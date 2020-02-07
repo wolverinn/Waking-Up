@@ -180,7 +180,6 @@ UDP接收方收到报文后，不需要给出任何确认
 
 <details>
 <summary>展开</summary>
-
 对某些实时性要求比较高的情况，选择UDP，比如游戏，媒体通信，实时视频流（直播），即使出现传输错误也可以容忍；其它大部分情况下，HTTP都是用TCP，因为要求传输的内容可靠，不出现丢失
 </details>
 
@@ -188,7 +187,7 @@ UDP接收方收到报文后，不需要给出任何确认
 
 <details>
 <summary>展开</summary>
-
+HTTP不可以使用UDP，HTTP需要基于可靠的传输协议，而UDP不可靠
 
 </details>
 

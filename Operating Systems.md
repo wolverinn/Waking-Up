@@ -106,23 +106,27 @@ wait操作：执行wait操作的进程进入条件变量链末尾，唤醒紧急
 > 
 > // 生产者进程
 > void producer(){
->   do{
->          P(empty);
->   		  P(mutex);
->       	   // 生产者进行生产
->       	  V(mutex);
->       	  V(full);
->     }while(1);
+> 	do{
+>     	P(empty);
+> 	  	P(mutex);
+> 
+>    		// 生产者进行生产
+>    	
+>    		V(mutex);
+>    		V(full);
+>  	} while(1);
 > }
 > 
 > void consumer(){
->     do{
-> 	      P(full);
-> 		    P(mutex);
-> 		    // 消费者进行消费
-> 		    V(mutex);
-> 		    V(empty);
->     }while(1);
+> 	do{
+> 		P(full);
+> 		P(mutex);
+> 
+>     	// 消费者进行消费
+> 
+> 		V(mutex);
+> 		V(empty);
+>  	} while(1);
 > }
 > 
 > ```

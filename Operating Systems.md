@@ -98,7 +98,42 @@ wait操作：执行wait操作的进程进入条件变量链末尾，唤醒紧急
 <summary>生产者-消费者问题</summary>
 
 > 问题描述：使用一个缓冲区来存放数据，只有缓冲区没有满，生产者才可以写入数据；只有缓冲区不为空，消费者才可以读出数据
-</details>
+>
+> ```c
+> // 伪代码描述 
+> // 定义信号量 full记录缓冲区物品数量 empty代表缓冲区空位数量 mutex为互斥量
+> semaphore full = 0, empty = n, mutex = 1;
+> 
+> // 生产者进程
+> void producer(){
+> 	do{
+>    	  P(empty);
+> 	  P(mutex);
+> 
+>      // 生产者进行生产
+>    	
+>    	  V(mutex);
+>    	  V(full);
+>  	} while(1);
+> }
+> 
+> void consumer(){
+> 	do{
+> 	  P(full);
+> 	  P(mutex);
+> 
+>     	// 消费者进行消费
+> 
+> 	  V(mutex);
+> 	  V(empty);
+>  	} while(1);
+> }
+> 
+> ```
+>
+> 
+>
+> </details>
 
 <details>
 <summary>哲学家就餐问题</summary>

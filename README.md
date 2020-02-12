@@ -38,6 +38,12 @@
 
 这个仓库目前还在不断完善之中，有些问题还没加入到笔记，有些问题的思路和答案可以做得更好！如果你有很棒的想法，欢迎提 issues 或者 pull requests！
 
+Contributers: 
+
+<a href="https://github.com/wangzitiansky">
+    <img src="https://avatars0.githubusercontent.com/u/49009644?s=460&v=4" width="40px">
+</a> 
+
 ## 1. [计算机网络](Computer%20Network.md)
 
 <div>

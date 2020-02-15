@@ -7,7 +7,6 @@
 【工作地点】北京/上海；  
 【岗位】服务端/前端/C++客户端/Android/iOS/测试；  
 社招/实习/校招均可。简历请发送至：zhangzekuan@bytedance.com；邮件标题：社招/实习/校招+岗位+姓名  
-也可以通过【内推码】https://job.toutiao.com/s/pxUsvH 自助内推～ 任何研发岗位都可以投，投了之后我们会根据你的简历匹配具体的岗位。实习生内推专属链接：https://job.toutiao.com/s/pWBDpg
 
 <div align="center">
 <img src="_v_images/20191229112508482_31766.png"></img>

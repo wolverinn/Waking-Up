@@ -16,7 +16,7 @@
 
 <div align="center">
 
-| &nbsp;&nbsp;&nbsp;计算机网络&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;操作系统&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数据库&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;设计模式&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工具&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;面经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    |
+| &nbsp;&nbsp;&nbsp;&nbsp;计算机网络&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;操作系统&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数据库&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;设计模式&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工具&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;面经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    |
 | :----------------------------------------: | :--------------------------------------------------: | :-------------------------------------------------------------: | :--------------------------------------------------: | :-----------------------------------------------------------------------: | :-------------------------------------------------------------: | :--------: |
 |          [:cloud:](#1-计算机网络)           |               [:computer:](#2-操作系统)               |                   [:floppy_disk:](#3-数据库)                    |                 [:art:](#4-设计模式)                  |                            [:wrench:](#5-工具)                            |                      [:snake:](#6-python)                       | [:memo:](https://www.nowcoder.com/discuss/359048) |
 </div>
@@ -32,10 +32,6 @@
 当你浏览每个版块的目录时，你可能会觉得并没有涉及到多少问题，但其实，**每个问题下的一连串追问**才是这些笔记的精华所在。如果你觉得你已经对目录中的问题了然于胸，你可以点进这些问题，多看看它们的 follow-up questions.
 
 这个repo没有包含数据结构与算法部分，你可以查看我的另一个repo：[Solid data structure and algorithms](https://github.com/wolverinn/Iridescent)，在这个repo中我系统地练习了各种数据结构和算法，并提供了Python代码
-
-### 我拿到offer了吗？
-
-你可以看到，这份笔记是19年11月份创建的，那之前我面试了两次字节跳动，都没有通过；之后用了大概一个月的时间，我开始使用这份笔记复习计算机基础；在12月底的时候，我拿到了字节跳动后端开发的offer.
 
 ### Contribute
 
@@ -90,7 +86,7 @@ Contributers:
 
 ------
  
-> 这个笔记本的名字来源于电影《Lone Survivor》中的配乐《Waking Up》，让我联想到海豹突击队的坚毅、全力以赴、为了训练而付出汗水；在电影中，这段配乐出现的场景，是两名队员在基地外面的大草原上晨跑。
+> 这个笔记本的名字来源于电影《Lone Survivor》中的配乐《Waking Up》；在电影中，这段配乐出现的场景，是两名队员在基地外面的大草原上晨跑。
 
 > 电影中我很喜欢的一句话：  
 > Anything in life worth doing is worth overdoing. Moderation is for cowards.

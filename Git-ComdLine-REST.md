@@ -43,11 +43,11 @@
 
 #### Git 撤销与回滚
 - **暂存区**：```git add```之后commit之前存在的区域；**工作区**：```git commit```之后存在的区域；**远程仓库**：```git push```之后；
-- 作了修改，但还没```git add```，撤销到上一次提交：```git checkout -- filename```；```git checkout -- .```
+- 作了修改，但还没```git add```，撤销到上一次提交：```git checkout -f -- filename```；```git checkout -f -- .```
 - 作了修改，并且已经```git add```，但还没```git commit```：
     - 先将暂存区的修改撤销：```git reset HEAD filename```/```git reset HEAD```；此时修改只存在于工作区，变为了 "unstaged changes"；
     - 再利用上面的checkout命令从工作区撤销修改
-- ```git add```之后，作了修改，想丢弃这次修改：```git checkout --filename```会回到最近一次```git add```
+- ```git add```之后，作了修改，想丢弃这次修改：```git checkout -f --filename```会回到最近一次```git add```
 - 作了修改，并且已经```git commit```了，想撤销这次的修改：
     - ```git revert commitID```. 其实，```git revert```可以用来撤销任意一次的修改，不一定要是最近一次
     - ```git reset --hard commitID```/```git reset --hard HEAD^```（HEAD表示当前版本，几个^表示倒数第几个版本，倒数第100个版本可以用HEAD~100）；参数```--hard```：强制将暂存区和工作区都同步到指定的版本

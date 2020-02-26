@@ -360,7 +360,6 @@ Cookie保存在客户端本地，客户端请求服务器时会将Cookie一起�
 ### 参考
 - [面试/笔试第一弹 —— 计算机网络面试问题集锦](https://blog.csdn.net/justloveyou_/article/details/78303617)
 - [什么时候选TCP、UDP？](https://blog.csdn.net/yjxsdzx/article/details/71937886)
-- [什么是TCP粘包？怎么解决这个问题](https://blog.csdn.net/weixin_41047704/article/details/85340311)
 
 ### 待完成
 - [ ] 发送窗口的大小，如何最大利用带宽，假设延迟100ms，发送端10Mb/s，接收端100Mb/s. [reference](https://blog.csdn.net/bad_sheep/article/details/6158676)

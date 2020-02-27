@@ -78,6 +78,10 @@
 
 7. 套接字(Socket)
 
+更详细的可以参考（待整理）：
+- https://imageslr.github.io/2020/02/26/ipc.html
+- https://www.jianshu.com/p/c1015f5ffa74
+
 ### 进程同步问题
 
 > 进程的同步是目的，而进程间通信是实现进程同步的手段

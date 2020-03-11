@@ -7,7 +7,7 @@
 【工作地点】北京/上海；  
 【岗位】后端/前端/C++客户端/Android/iOS/算法/测试；**社招/实习/校招**均可，实习开放可转正实习/日常实习/暑期实习，社招开放初级/中级/高级各种级别  
 【简历投递 - 社招/实习】社招/实习简历请发送至：zhangzekuan@bytedance.com；邮件标题：社招/实习+岗位+姓名。**所有邮件一天之内回复**，我可以帮忙查进度以及修改简历，有任何岗位、简历进度、面试相关的问题都可以问我~  
-【简历投递 - 校招】校招通过内推码: YZGYZWU 在[校招官网](https://job.toutiao.com/campus/)自助投递，内推将获得简历优先筛选机会～后端请戳[:raising_hand::raising_hand:](https://job.toutiao.com/s/tBe2Vr)
+【简历投递 - 校招】校招通过内推码: YZGYZWU 在[校招官网](https://job.toutiao.com/campus/)自助投递，内推将获得简历优先筛选机会～后端请戳[:raising_hand::raising_hand:](https://job.toutiao.com/s/n4A4kB)
 
 <div align="center">
 <img src="_v_images/20191229112508482_31766.png"></img>

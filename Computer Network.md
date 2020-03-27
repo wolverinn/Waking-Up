@@ -62,9 +62,12 @@
 <details>
 <summary>展开</summary>
 
+Server端：  
 由于Server没有收到ACK确认，因此会重发之前的SYN+ACK（默认重发五次，之后自动关闭连接进入CLOSED状态），Client收到后会重新传ACK给Server。
 
-在Server进行超时重发的过程中，如果Client向服务器发送数据，服务器会以差错报文应答。在Server进入CLOSED状态之后，如果Client向服务器发送数据，服务器会以RST包应答。
+Client端，两种情况：  
+1. 在Server进行超时重发的过程中，如果Client向服务器发送数据，数据头部的ACK是为1的，所以服务器收到数据之后会读取 ACK number，进入 establish 状态  
+2. 在Server进入CLOSED状态之后，如果Client向服务器发送数据，服务器会以RST包应答。
 </details>
 
 ##### 如果已经建立了连接，但客户端出现了故障怎么办？

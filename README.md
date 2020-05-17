@@ -74,8 +74,10 @@ Contributers:
 </div>
 
 ## 4. [设计模式](Design%20Pattern.md)
-
-（待整理）
+<div>
+<a href="Design Pattern.md" target="_blank"><img src="_v_images/20200516165618.png"></img><br/>
+<img src="_v_images/20200516165630.png"></img></a>
+</div>
 
 ## 5. [工具](Git-ComdLine-REST.md)
 

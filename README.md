@@ -54,6 +54,9 @@ Contributers:
 <a href="https://github.com/hikirkendall">
     <img src="https://avatars0.githubusercontent.com/u/38038825?s=460&v=4" width="40px">
 </a> 
+<a href="https://github.com/lutherlau">
+    <img src="https://avatars3.githubusercontent.com/u/29849382?s=460&v=4" width="40px">
+</a> 
 
 ## 1. [计算机网络](Computer%20Network.md)
 
@@ -74,6 +77,9 @@ Contributers:
 </div>
 
 ## 4. [设计模式](Design%20Pattern.md)
+
+Provided by @[lutherlau](https://github.com/lutherlau)
+
 <div>
 <a href="Design Pattern.md" target="_blank"><img src="_v_images/20200516165618.png"></img><br/>
 <img src="_v_images/20200516165630.png"></img></a>

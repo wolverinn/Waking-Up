@@ -59,7 +59,13 @@
     - 先读取想要更新的字段或者所有字段，更新的时候比较一下，只有字段没有变化才进行更新
 
 ### 常见的封锁类型？
-
+意向锁是 InnoDB 自动加的， 不需用户干预。 
+对于 UPDATE、 DELETE 和 INSERT 语句， InnoDB
+会自动给涉及数据集加排他锁（X)；
+对于普通 SELECT 语句，InnoDB 不会加任何锁；
+事务可以通过以下语句显式给记录集加共享锁或排他锁：
+共享锁（S）：SELECT * FROM table_name WHERE ... LOCK IN SHARE MODE。 其他 session 仍然可以查询记录，并也可以对该记录加 share mode 的共享锁。但是如果当前事务需要对该记录进行更新操作，则很有可能造成死锁。
+排他锁（X)：SELECT * FROM table_name WHERE ... FOR UPDATE。其他 session 可以查询该记录，但是不能对该记录加共享锁或排他锁，而是等待获得锁
 - **排它锁**（Exclusive Lock）/ X锁：事务对数据加上X锁时，只允许此事务读取和修改此数据，并且其它事务不能对该数据加任何锁；
 - **共享锁**（Shared Lock）/ S锁：加了S锁后，该事务只能对数据进行读取而不能修改，并且其它事务只能加S锁，不能加X锁
 - **意向锁**（Intention Locks）：

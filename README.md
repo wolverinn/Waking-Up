@@ -2,6 +2,8 @@
 
 > 大多数人都高估了他们一天能做的事情，但低估了他们一年能做的事情
 
+## 补充:eyeglasses:：字节跳动部门直推，请戳[:raising_hand::raising_hand:这里:raising_hand::raising_hand:](https://github.com/wolverinn/Waking-Up/issues/16)
+
 <div align="center">
 <img src="_v_images/20191229112508482_31766.png"></img>
 </div>

@@ -312,7 +312,7 @@ Cookie保存在客户端本地，客户端请求服务器时会将Cookie一起�
 ### 什么是RIP (Routing Information Protocol, 距离矢量路由协议)? 算法是什么？
 每个路由器维护一张表，记录该路由器到其它网络的”跳数“，路由器到与其直接连接的网络的跳数是1，每多经过一个路由器跳数就加1；更新该表时和相邻路由器交换路由信息；路由器允许一个路径最多包含15个路由器，如果跳数为16，则不可达。交付数据报时优先选取距离最短的路径。
 
-（PS：RIP是应用层协议：https://www.zhihu.com/question/19645407）
+（PS：RIP是应用层协议：[https://www.zhihu.com/question/19645407](https://www.zhihu.com/question/19645407)）
 
 <details>
 <summary>优缺点</summary>

@@ -68,6 +68,51 @@ Python中有一个被称为Global Interpreter Lock（GIL）的东西，它会确
 
 可以通过多进程实现多核任务。
 
+## GIL(Global Interpreter Lock)
+全局解释器锁
+
+全局解释器锁(Global Interpreter Lock)是计算机程序设计语言解释器用于同步线程的一种机制，它使得任何时刻仅有一个线程在执行。即便在多核处理器上，使用 GIL 的解释器也只允许同一时间执行一个线程，常见的使用 GIL 的解释器有CPython与Ruby MRI。可以看到GIL并不是Python独有的特性，是解释型语言处理多线程问题的一种机制而非语言特性。
+
+### GIL的设计初衷?
+<details>
+<summary>展开</summary>
+单核时代高效利用CPU, 针对解释器级别的数据安全(不是thread-safe 线程安全)。
+首先需要明确的是GIL并不是Python的特性，它是在实现Python解析器(CPython)时所引入的一个概念。当Python虚拟机的线程想要调用C的原生线程需要知道线程的上下文，因为没有办法控制C的原生线程的执行，所以只能把上下文关系传给原生线程，同理获取结果也是线
+程在python虚拟机这边等待。那么要执行一次计算操作，就必须让执行程序的线程组串行执行。
+</details>
+
+### 为什么要加在解释器,而不是在其他层?
+<details>
+<summary>展开</summary>
+GIL锁加在解释器一层，也就是说Python调用的Cython解释器上加了GIL锁，因为你python调用的所有线程都是原生线程。原生线程是通过C语言提供原生接口，相当于C语言的一个函数。你一调它，你就控制不了了它了，就必须等它给你返回结果。只要已通过python虚拟机
+，再往下就不受python控制了，就是C语言自己控制了。加在Python虚拟机以下加不上去，只能加在Python解释器这一层。
+</details>
+
+### GIL的实现是线程不安全?为什么?
+<details>
+<summary>展开</summary>
+是不安全的，具体情况要分类讨论。
+
+单核情况下:
+
+![单核情况下——线程不安全](https://images2017.cnblogs.com/blog/1088183/201709/1088183-20170926140930839-80064182.png)
+
+> 解释:
+> 1. 到第5步的时候，可能这个时候python正好切换了一次GIL(据说python2.7中，每100条指令会切换一次GIL),执行的时间到了，被要求释放GIL,这个时候thead 1的count=0并没有得到执行，而是挂起状态，count=0这个上下文关系被存到寄存器中.
+> 2. 然后到第6步，这个时候thead 2开始执行，然后就变成了count = 1,返回给count，这个时候count=1.
+> 3. 然后再回到thead 1，这个时候由于上下文关系，thead 1拿到的寄存器中的count = 0，经过计算，得到count = 1，经过第13步的操作就覆盖了原来的count = 1的值，所以这个时候count依然是count = 1，所以这个数据并没有保护起来。
+
+python2.x和3.x都是在执行IO操作的时候，强制释放GIL，使其他线程有机会执行程序。
+
+Python2.x Python使用计数器ticks计算字节码，当执行100个字节码的时候强制释放GIL，其他线程获取GIL继续执行。ticks可以看作是Python自己的计数器，专门作用于GIL，释放后归零，技术可以调整。
+
+Python3.x Python使用计时器，执行时间达到阈值后，当前线程释放GIL。总体来说比Python3.x对CPU密集型任务更好，但是依然没有解决问题。
+
+多核情况下:
+
+多个CPU情况下，单个CPU释放GIL锁，其他CPU上的线程也会竞争，但是CPU-A可能又马上拿到了GIL，这样其他CPU上的线程只能继续等待，直到重新回到待调度状态。造成多线程在多核CPU情况下，效率反而会下降，出现了大量的资源浪费。
+</details>
+
 ## 什么是装饰器？
 
 ## Python 中的垃圾回收机制？
@@ -126,3 +171,6 @@ print(a is b)
 ### 参考
 - [生成器 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/1016959663602400/1017318207388128)
 - [Python中的is和==的区别](https://www.cnblogs.com/yjtxin/p/11793243.html)
+- [为什么Python多线程无法利用多核](https://www.mdeditor.tw/pl/pXhj)
+- [GIL锁、线程锁(互斥锁)、递归锁(RLock)](https://www.cnblogs.com/Keep-Ambition/p/7596098.html)
+

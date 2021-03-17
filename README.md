@@ -34,6 +34,8 @@
 
 这个仓库目前还在不断完善之中，有些问题还没加入到笔记，有些问题的思路和答案可以做得更好！如果你有很棒的想法，欢迎提 issues 或者 pull requests！
 
+感谢所有参与到这个项目中的伙伴们（如果下面漏掉了你，可以提醒我一下）～
+
 Contributers: 
 
 <a href="https://github.com/wangzitiansky">
@@ -65,6 +67,18 @@ Contributers:
 </a> 
 <a href="https://github.com/MarcelArthur">
     <img src="https://avatars0.githubusercontent.com/u/12690819?s=400&v=4" width="40px">
+</a> 
+<a href="https://github.com/zhou-xia-ping">
+    <img src="https://avatars.githubusercontent.com/u/40256652?s=460&v=4" width="40px">
+</a> 
+<a href="https://github.com/jiamingli9674">
+    <img src="https://avatars.githubusercontent.com/u/39242771?s=460&v=4" width="40px">
+</a> 
+<a href="https://github.com/zhukewen1998">
+    <img src="https://avatars.githubusercontent.com/u/53121066?s=400&v=4" width="40px">
+</a> 
+<a href="https://github.com/chaoers">
+    <img src="https://avatars.githubusercontent.com/u/44529210?s=400&v=4" width="40px">
 </a> 
 
 ## 1. [计算机网络](Computer%20Network.md)

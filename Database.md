@@ -291,6 +291,8 @@ InnoDB的索引使用的是B+树实现，B+树对比B树的好处：
 - 冷备份：数据库正常关闭后，将关键性文件复制到另一位置的备份方式。优点：操作简单快速，恢复简单
 </details>
 
+更详细的可以参考：[MySQL 数据库的存储引擎与适用场景 - Images](https://imageslr.github.io/2020/db-engine.html)
+
 ### 如何优化数据库？
 <details>
 <summary>SQL 语句的优化</summary>

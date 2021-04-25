@@ -13,9 +13,9 @@
 
 <div align="center">
 
-| &nbsp;&nbsp;&nbsp;&nbsp;计算机网络&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;操作系统&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数据库&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;设计模式&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工具&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;面经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    |
+| &nbsp;&nbsp;&nbsp;&nbsp;计算机网络&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;操作系统&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;数据库&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;设计模式&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工具&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;面经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    |
 | :----------------------------------------: | :--------------------------------------------------: | :-------------------------------------------------------------: | :--------------------------------------------------: | :-----------------------------------------------------------------------: | :-------------------------------------------------------------: | :--------: |
-|          [:cloud:](#1-计算机网络)           |               [:computer:](#2-操作系统)               |                   [:floppy_disk:](#3-数据库)                    |                 [:art:](#4-设计模式)                  |                            [:wrench:](#5-工具)                            |                      [:snake:](#6-python)                       | [:memo:](https://www.nowcoder.com/discuss/359048) |
+|          [:cloud:](#1-计算机网络)           |               [:computer:](#2-操作系统)               |                   [:floppy_disk:](#3-数据库)                    |                 [:art:](#4-设计模式)                  |                            [:wrench:](#5-工具)                            |                      [:snake:](#6-python)                       | [:memo:](#7-面经) |
 </div>
 
 ### 如何使用？
@@ -120,9 +120,16 @@ Provided by @[lutherlau](https://github.com/lutherlau)
 <a href="Python%20Handbook.md" target="_blank"><img src="_v_images/20191229144622659_9248.png" width="370px"></img></a>
 </div>
 
+## 7. [面经](https://www.nowcoder.com/discuss/359048)
+以下是我的面经，以及备战面试上岸经历分享
+- [字节跳动后端开发三轮面经](https://www.nowcoder.com/discuss/359048)
+- [字节跳动后端一面面经](https://mp.weixin.qq.com/s?__biz=MzU2OTk2Mzg3Mg==&mid=2247483685&idx=1&sn=933611d3dec4b4054cdbc33738261243&chksm=fcf7e52acb806c3c2390999e99a08e02ad51c484d5e47a9188fbcdb15e8693e11558915db842&token=1562114548&lang=zh_CN#rd)
+- [上岸经历分享](https://mp.weixin.qq.com/s?__biz=MzU2OTk2Mzg3Mg==&mid=2247483707&idx=1&sn=605d5f502dff18d6c335fefc677c0c55&chksm=fcf7e534cb806c22588ced14f6040e907a08d0c815a7ea8ba0f4cd2be0ac2d7821c490104764&token=1562114548&lang=zh_CN#rd)
+
 <div align="center">
 <img src="_v_images/20191229111930083_22798.png" width="640px"></img>
 </div>
+
 
 ------
  

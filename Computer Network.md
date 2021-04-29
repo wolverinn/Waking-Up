@@ -223,6 +223,8 @@ UDP接收方收到报文后，不需要给出任何确认
 <summary>展开</summary>
 HTTP不可以使用UDP，HTTP需要基于可靠的传输协议，而UDP不可靠
 
+注：http 3.0 使用udp实现
+https://zh.wikipedia.org/wiki/HTTP/3
 </details>
 
 ##### 面向连接和无连接的区别

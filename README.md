@@ -129,7 +129,9 @@ Provided by @[lutherlau](https://github.com/lutherlau)
 - [字节跳动后端一面面经](https://mp.weixin.qq.com/s?__biz=MzU2OTk2Mzg3Mg==&mid=2247483685&idx=1&sn=933611d3dec4b4054cdbc33738261243&chksm=fcf7e52acb806c3c2390999e99a08e02ad51c484d5e47a9188fbcdb15e8693e11558915db842&token=1562114548&lang=zh_CN#rd)
 - [上岸经历分享](https://mp.weixin.qq.com/s?__biz=MzU2OTk2Mzg3Mg==&mid=2247483707&idx=1&sn=605d5f502dff18d6c335fefc677c0c55&chksm=fcf7e534cb806c22588ced14f6040e907a08d0c815a7ea8ba0f4cd2be0ac2d7821c490104764&token=1562114548&lang=zh_CN#rd)
 
-## 补充:eyeglasses:：字节跳动内推（实习/社招/校招），请戳[:raising_hand::raising_hand:这里:raising_hand::raising_hand:](https://github.com/wolverinn/Waking-Up/issues/16)
+## 补充:eyeglasses:：
+- 字节跳动内推（实习/社招/校招），请戳[:raising_hand::raising_hand:这里:raising_hand::raising_hand:](https://github.com/wolverinn/Waking-Up/issues/16)
+- 查看我的最新项目：[技术学习Roadmap](https://github.com/wolverinn/Build-your-programming-skills)
 
 <div align="center">
 <img src="_v_images/20191229111930083_22798.png" width="640px"></img>

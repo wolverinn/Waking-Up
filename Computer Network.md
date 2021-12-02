@@ -35,6 +35,7 @@
 - 第一次握手：Client将SYN置1，随机产生一个初始序列号seq发送给Server，进入SYN_SENT状态；
 - 第二次握手：Server收到Client的SYN=1之后，知道客户端请求建立连接，将自己的SYN置1，ACK置1，产生一个acknowledge number=sequence number+1，并随机产生一个自己的初始序列号，发送给客户端；进入SYN_RCVD状态；
 - 第三次握手：客户端检查acknowledge number是否为序列号+1，ACK是否为1，检查正确之后将自己的ACK置为1，产生一个acknowledge number=服务器发的序列号+1，发送给服务器；进入ESTABLISHED状态；服务器检查ACK为1和acknowledge number为序列号+1之后，也进入ESTABLISHED状态；完成三次握手，连接建立。
+- [使用 tcpdump 抓包分析三次握手过程](https://imageslr.github.io/2020/07/07/tcp-shake-wave.html#tcpdump)
 
 ##### TCP建立连接可以两次握手吗？为什么?
 <details>
@@ -93,6 +94,7 @@ TCP连接的一方A，随机选择一个32位的序列号（Sequence Number）�
 - 第二次挥手：Server收到FIN之后，发送一个ACK=1，acknowledge number=收到的序列号+1；进入CLOSE_WAIT状态。此时客户端已经没有要发送的数据了，但仍可以接受服务器发来的数据。
 - 第三次挥手：Server将FIN置1，发送一个序列号给Client；进入LAST_ACK状态；
 - 第四次挥手：Client收到服务器的FIN后，进入TIME_WAIT状态；接着将ACK置1，发送一个acknowledge number=序列号+1给服务器；服务器收到后，确认acknowledge number后，变为CLOSED状态，不再向客户端发送数据。客户端等待2*MSL（报文段最长寿命）时间后，也进入CLOSED状态。完成四次挥手。
+- [使用 tcpdump 抓包分析四次挥手过程](https://imageslr.github.io/2020/07/07/tcp-shake-wave.html#tcpdump)
 
 ##### 为什么不能把服务器发送的ACK和FIN合并起来，变成三次挥手（CLOSE_WAIT状态意义是什么）？
 

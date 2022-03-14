@@ -3,7 +3,7 @@
 > 大多数人都高估了他们一天能做的事情，但低估了他们一年能做的事情
 
 ## 补充:eyeglasses:：字节跳动部门直推，请戳[:raising_hand::raising_hand:这里:raising_hand::raising_hand:](https://github.com/wolverinn/Waking-Up/issues/16)
-## 字节跳动在线教育业务线21届秋招，HC多多，字节跳动校招内推码: ```YZGYZWU``` 投递链接: https://job.toutiao.com/s/Jjq9YQT
+## 字节跳动校招内推码: ```YZGYZWU``` 投递链接: https://job.toutiao.com/s/Jjq9YQT
 
 <div align="center">
 <img src="_v_images/20191229112508482_31766.png"></img>

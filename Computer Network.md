@@ -278,7 +278,8 @@ https://zh.wikipedia.org/wiki/HTTP/3
 
 [你访问的网站是如何自动切换到 HTTPS 的？](https://www.sohu.com/a/136637876_487516)
 
-一种是原始的302跳转，服务器把所有的HTTp流量跳转到HTTPS。但这样有一个漏洞，就是中间人可能在第一次访问站点的时候就劫持。
+一种是原始的302跳转，服务器把所有的HTTp流量跳转到HTTPS。但这样有一个漏洞，就是
+   可能在第一次访问站点的时候就劫持。
 解决方法是引入HSTS机制，用户浏览器在访问站点的时候强制使用HTTPS。
 </details>
 
@@ -286,7 +287,13 @@ https://zh.wikipedia.org/wiki/HTTP/3
 
 <details>
 <summary>展开</summary>
+1.验证域名、有效期等信息是否正确。证书上都有包含这些信息，比较容易完成验证；
 
+2.判断证书来源是否合法。每份签发证书都可以根据验证链查找到对应的根证书，操作系统、浏览器会在本地存储权威机构的根证书，利用本地根证书可以对对应机构签发证书完成来源验证；
+
+3.判断证书是否被篡改。需要与 CA 服务器进行校验；
+
+4.判断证书是否已吊销。通过CRL（Certificate Revocation List 证书注销列表）和 OCSP（Online Certificate Status Protocol 在线证书状态协议）实现，其中 OCSP 可用于第3步中以减少与 CA 服务器的交互，提高验证效率
 
 </details>
 

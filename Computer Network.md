@@ -263,6 +263,8 @@ https://zh.wikipedia.org/wiki/HTTP/3
 ##### Https的连接过程？
 <details>
 <summary>展开</summary>
+![image-20221212012139142](/_v_images/image-20221212012139142.png)
+
 
 1. 客户端向服务器发送请求，同时发送客户端支持的一套加密规则（包括对称加密、非对称加密、摘要算法）；
 2. 服务器从中选出一组加密算法与HASH算法，并将自己的身份信息以证书的形式发回给浏览器。证书里面包含了网站地址，**加密公钥**（用于非对称加密），以及证书的颁发机构等信息（证书中的私钥只能用于服务器端进行解密）；
@@ -406,5 +408,6 @@ Cookie保存在客户端本地，客户端请求服务器时会将Cookie一起�
 
 ### 参考
 - [面试/笔试第一弹 —— 计算机网络面试问题集锦](https://blog.csdn.net/justloveyou_/article/details/78303617)
+- [【面试】计算机网络_雨下一整晚real的博客-CSDN博客](https://blog.csdn.net/qq_43103529/article/details/120813469)
 - [什么时候选TCP、UDP？](https://blog.csdn.net/yjxsdzx/article/details/71937886)
 - [TCP速率与窗口，带宽，RTT之间的关系](https://blog.csdn.net/bad_sheep/article/details/6158676)

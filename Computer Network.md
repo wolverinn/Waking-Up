@@ -30,7 +30,7 @@
 
 ### 什么是三次握手 (three-way handshake)？
 
-![三次握手](_v_images/20191129101827556_21212.png)
+![image-20221212004219997](/_v_images/image-20221212004219997.png)
 
 - 第一次握手：Client将SYN置1，随机产生一个初始序列号seq发送给Server，进入SYN_SENT状态；
 - 第二次握手：Server收到Client的SYN=1之后，知道客户端请求建立连接，将自己的SYN置1，ACK置1，产生一个acknowledge number=sequence number+1，并随机产生一个自己的初始序列号，发送给客户端；进入SYN_RCVD状态；
@@ -90,7 +90,7 @@ TCP连接的一方A，随机选择一个32位的序列号（Sequence Number）�
 
 ### 什么是四次挥手？
 
-![四次挥手](_v_images/20191129112652915_15481.png)
+![image-20221212004254912](/_v_images/image-20221212004254912.png)
 
 - 第一次挥手：Client将FIN置为1，发送一个序列号seq给Server；进入FIN_WAIT_1状态；
 - 第二次挥手：Server收到FIN之后，发送一个ACK=1，acknowledge number=收到的序列号+1；进入CLOSE_WAIT状态。此时客户端已经没有要发送的数据了，但仍可以接受服务器发来的数据。

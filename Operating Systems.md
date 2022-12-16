@@ -226,7 +226,7 @@ void test_forks(int i) {
 
 ### 进程有哪几种状态？
 
-![Process State](_v_images/20191202090217863_1873.png)
+![Process State](_v_images/image-20221216125538480.png)
 
 - 就绪状态：进程已获得除处理机以外的所需资源，等待分配处理机资源
 - 运行状态：占用处理机资源运行，处于此状态的进程数小于等于CPU数

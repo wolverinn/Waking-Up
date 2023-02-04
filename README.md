@@ -152,4 +152,7 @@ Provided by @[lutherlau](https://github.com/lutherlau)
 > 电影中我很喜欢的一句话：  
 > Anything in life worth doing is worth overdoing. Moderation is for cowards.
 
-![waking-up](_v_images/20191228182659294_7488.jpg)
+
+<div>
+<a href="Python%20Handbook.md" target="_blank"><img src="https://upload-images.jianshu.io/upload_images/10634927-76db0b9928deb0fb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" src="_v_images/20191228182659294_7488.jpg"></img></a>
+</div>

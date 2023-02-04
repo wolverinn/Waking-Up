@@ -3,7 +3,7 @@
 > 大多数人都高估了他们一天能做的事情，但低估了他们一年能做的事情
 
 <div align="center">
-<img src="_v_images/20191229112508482_31766.png"></img>
+<img src="https://upload-images.jianshu.io/upload_images/10634927-dc42fd1c3c32b515.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" src="_v_images/20191229112508482_31766.png"></img>
 </div>
 
 这是我用来准备后端开发校招面试的一个笔记本。按照计算机基础知识的不同版块，记录了面试中常见的问题以及比较规范的答案，大部分问题都带有更加细节的知识点追问。我用它来收集整理自己遇到的一些面试题，并且在面试前回顾。
@@ -137,10 +137,11 @@ Provided by @[lutherlau](https://github.com/lutherlau)
 
 ## 补充:eyeglasses:：
 - 字节跳动内推（实习/社招/校招），请戳[:raising_hand::raising_hand:这里:raising_hand::raising_hand:](https://github.com/wolverinn/Waking-Up/issues/16)
-- 查看我的最新项目：[技术学习Roadmap](https://github.com/wolverinn/Build-your-programming-skills)
+- 查看我的最新项目：[技术学习Roadmap](https://github.com/wolverinn/Build-your-programming-skills)（工作之后的个人技术成长路线）
+- 我的公众号：[Hardy的小屋](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1807403091504250883)，聊聊个人成长，欢迎关注
 
 <div align="center">
-<img src="_v_images/20191229111930083_22798.png" width="640px"></img>
+<img src="https://upload-images.jianshu.io/upload_images/10634927-68d0fd0344d4981d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" src="_v_images/20191229111930083_22798.png" width="640px"></img>
 </div>
 
 

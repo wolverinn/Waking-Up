@@ -30,7 +30,7 @@
 
 ### 什么是三次握手 (three-way handshake)？
 
-![image-20221212004219997](/_v_images/image-20221212004219997.png)
+![image-20221212004219997](_v_images/image-20221212004219997.png)
 
 - 第一次握手：Client将SYN置1，随机产生一个初始序列号seq发送给Server，进入SYN_SENT状态；
 - 第二次握手：Server收到Client的SYN=1之后，知道客户端请求建立连接，将自己的SYN置1，ACK置1，产生一个acknowledge number=sequence number+1，并随机产生一个自己的初始序列号，发送给客户端；进入SYN_RCVD状态；
@@ -90,7 +90,7 @@ TCP连接的一方A，随机选择一个32位的序列号（Sequence Number）�
 
 ### 什么是四次挥手？
 
-![image-20221212004254912](/_v_images/image-20221212004254912.png)
+![image-20221212004254912](_v_images/image-20221212004254912.png)
 
 - 第一次挥手：Client将FIN置为1，发送一个序列号seq给Server；进入FIN_WAIT_1状态；
 - 第二次挥手：Server收到FIN之后，发送一个ACK=1，acknowledge number=收到的序列号+1；进入CLOSE_WAIT状态。此时客户端已经没有要发送的数据了，但仍可以接受服务器发来的数据。
@@ -263,7 +263,7 @@ https://zh.wikipedia.org/wiki/HTTP/3
 ##### Https的连接过程？
 <details>
 <summary>展开</summary>
-![image-20221212012139142](/_v_images/image-20221212012139142.png)
+![image-20221212012139142](_v_images/image-20221212012139142.png)
 
 
 1. 客户端向服务器发送请求，同时发送客户端支持的一套加密规则（包括对称加密、非对称加密、摘要算法）；
@@ -408,7 +408,7 @@ Cookie保存在客户端本地，客户端请求服务器时会将Cookie一起�
 
 ## HTTP各版本
 
-![image-20220528142308368](/_v_images/202205281423439.png)
+![image-20220528142308368](_v_images/202205281423439.png)
 
 - HTTP 0.9版本
 
@@ -441,7 +441,7 @@ Cookie保存在客户端本地，客户端请求服务器时会将Cookie一起�
   - 基于UDP的**QUIC多路复用**：在一个QUIC中可以并发发送多个HTTP请求Stream，且如果各个Stream互不依赖，那么就不会造成**使用TCP带来的队头阻塞问题**。这个问题源头上是因为TCP连接，TCP连接的性质决定了重传会影响队后的数据发送，所以干脆选用UDP来解决这个方案。
   - 0RRT建链：RRT表示Round-Trip Time，3.0可以实现0RRT建链。一般来说HTTPS协议要建立完整链接包括**TCP握手**和**TLS握手**，总计需要至少2-3个RTT，普通的HTTP协议也需要至少1个RTT才可以完成握手。基于UDP的QUIC协议可以在第一次发送包的时候直接发送业务数据。但是由于首次连接需要发送公钥数据，所以首次连接并不使用这一方法。
 
-  ![image-202205281424550.gif](/_v_images/202205281424550.gif)
+  ![image-202205281424550.gif](_v_images/202205281424550.gif)
 
   > 参考文档：[图解 | 为什么HTTP3.0要弃用TCP协议，而改用UDP协议？_涛哥聊Python-CSDN博客](
 
